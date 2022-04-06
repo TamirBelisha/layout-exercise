@@ -1,0 +1,14 @@
+//SETUP 
+@import 'setup/typography';
+@import 'setup/variables';
+@import 'setup/mixins';
+//BASIC
+@import 'basic/base';
+
+//COMPONENTS
+@import 'components/app-header';
+@import 'components/app-hero';
+@import 'components/features-preview';
+@import 'components/stay-productive';
+@import 'components/reviews';
+@import 'components/app-footer'

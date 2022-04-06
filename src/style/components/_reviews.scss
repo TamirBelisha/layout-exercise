@@ -1,0 +1,140 @@
+.reviews-container {
+    padding-top: 100px;
+    padding-bottom: 275px;
+    background-color: $clr2;
+    @include flex();
+    gap: 40px;
+    position: relative;
+    .review {
+        width: 360px;
+        height: 200px;
+        border-radius: 5px;
+        background-color: $clr4;
+        padding: 40px 24px;
+        p {
+            letter-spacing: 1px;
+            line-height: 21px;
+            margin: 0;
+        }
+        .user {
+            margin-top: 24px;
+            @include flex(row, flex-start, center);
+            gap: 1rem;
+            img {
+                height: 24px;
+                width: 24px;
+                border-radius: 50%;
+            }
+            h3 {
+                font-size: 10px;
+                letter-spacing: 1px;
+                line-height: 12px;
+                font-family: "Open-Sans-bold";
+                margin: 0;
+                margin-bottom: -4px;
+            }
+            span {
+                font-size: 7px;
+                letter-spacing: 0px;
+                line-height: 10px;
+            }
+        }
+    }
+    .signup {
+        width: 860px;
+        height: 275px;
+        background-color: $clr1;
+        position: absolute;
+        bottom: -115px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.526);
+        text-align: center;
+        padding-top: 50px;
+
+        h2 {
+            font-size: 32px;
+            line-height: 48px;
+            font-family: Raleway-bold;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        p {
+            max-width: 673px;
+            display: inline-block;
+            line-height: 21px;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        div {
+            @include flex;
+            gap: 30px;
+            input {
+                height: 50px;
+                width: 480px;
+                border-radius: 20px;
+                font-size: 12px;
+                color: #c0c0c0;
+                font-weight: 400;
+                font-family: Open-sans;
+                padding-left: 30px;
+            }
+            button {
+                @include cyanBtn;
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        .review {
+            width: fit-content;
+            max-width: 70vw;
+            height: unset;
+        }
+    }
+    @media (max-width: 880px) {
+        .signup {
+            width: unset;
+            height: unset;
+            margin: 0 20px;
+            padding: 50px 20px;
+
+            h2 {
+                font-size: 24px;
+                line-height: unset;
+            }
+            div {
+                flex-direction: column;
+            }
+        }
+    }
+    @media (max-width: 620px) {
+        .signup {
+            padding: 30px 20px;
+
+            div {
+                input {
+                    width: 70%;
+                    min-width: 280px;
+                }
+            }
+        }
+    }
+    @media (max-width: 375px) {
+        .review {
+            margin: 24px 48px;
+            width: fit-content;
+            padding: 25px 20px;
+            p {
+                font-size: 10px;
+            }
+        }
+        .signup {
+            div {
+                input {
+                    min-width: unset;
+                    width: 250px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin cyanBtn() {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: Raleway-bold;
+    height: 48px;
+    width: 280px;
+    border-radius: 56px;
+    border: 0;
+    background: linear-gradient(to right, $clr5, $clr6);
+    span {
+        display: inline-block;
+        margin-top: 5px;
+    }
+
+    @media (max-width: 375px) {
+        width: 250px;
+    }
+}

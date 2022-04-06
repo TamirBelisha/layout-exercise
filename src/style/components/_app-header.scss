@@ -1,0 +1,28 @@
+.app-header {
+    @include flex(row, space-between, center);
+    padding: 75px 80px;
+    color: white;
+    background-color: $clr1;
+
+    nav {
+        @include flex;
+        gap: 1rem;
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: Raleway;
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 880px) {
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+    @media (max-width: 430px) {
+        .logo {
+            img {
+                width: 82px;
+            }
+        }
+    }
+}

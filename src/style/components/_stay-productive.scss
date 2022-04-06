@@ -1,0 +1,86 @@
+.stay-productive {
+    background-color: $clr2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 100px;
+    img {
+        margin-right: 100px;
+    }
+    .content {
+        width: 480px;
+        height: 100%;
+        @include flex(column, center, flex-start);
+        h2 {
+            // width: 506px;
+            font-size: 40px;
+            line-height: 50px;
+            font-family: Raleway-bold;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        a {
+            font-size: 16px;
+            color: #62e0d9;
+            text-decoration: none;
+            width: max-content;
+            border-bottom: 2px solid #62e0d9;
+            margin-bottom: 4px;
+            cursor: pointer;
+            span {
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+                transform: translateY(4px);
+                margin-left: 4px;
+            }
+        }
+    }
+    @media (max-width: 1300px) {
+        padding: 0;
+        img {
+            margin: 0 auto;
+        }
+        .content {
+            margin: 0 auto;
+        }
+    }
+    @media (max-width: 1150px) {
+        grid-template-columns: unset;
+        img.illustration {
+            max-width: 80vw;
+            margin-bottom: 100px;
+        }
+        .content {
+            max-width: 80vw;
+        }
+    }
+    @media (max-width: 375px) {
+            padding: 0;
+            grid-template-columns: unset;
+            img {
+                margin: 0;
+                max-width: 300px;
+                margin-left: 20px;
+            }
+
+            .content {
+                max-width: unset;
+                width: unset;
+                margin: 0 20px;
+                h2 {
+                    font-size: 18px;
+                    margin: 0;
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+                a {
+                    font-size: 12px;
+                }
+            }
+    }
+}
